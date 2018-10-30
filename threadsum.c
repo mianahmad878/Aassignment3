@@ -23,7 +23,7 @@ for (inti=0;i<1000;i++) {
 	  pthread_create(&thread_t1[i],NULL,Add,(void*)(i*100));
 	
 	for (int j=0;j<10;j++)
-	  pthread_join(&thread_t1[j],(void**) & status_t1[j]);
+	  pthread_join(thread_t1[j],(void**) & status_t1[j]);
 		
     for (int k=0;k<10;k++)
 	sum=sum+status_t1[k];
